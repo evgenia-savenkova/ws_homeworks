@@ -424,7 +424,7 @@ body {
     margin-right: 20px; }
   .hero__instagram {
     position: absolute;
-      position-left: 0;
+    left: 0;
     top: 0;
     max-width: 80px;
     height: 100%; }

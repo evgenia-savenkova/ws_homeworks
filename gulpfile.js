@@ -1,12 +1,15 @@
-const {src, dest, watch} = require('gulp');
-const browserSync = require('browser-sync').create();
+const {src, dest, watch } = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const rename = require('gulp-rename');
+const cssmin = require('gulp-cssmin');
+const browserSync = require('browser-sync').create();
+
 
 
 // Static server
 function bs() {
-    serveSass
+    serveSass();
     browserSync.init({
         server: {
             baseDir: "./"
@@ -28,4 +31,12 @@ function serveSass() {
         .pipe(browserSync.stream());
 };
 
+function minicss() {
+    return src('./css/**/*.css')
+    .pipe(cssmin())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(dest('./css'))
+};
+
 exports.serve = bs
+exports.minicss = minicss

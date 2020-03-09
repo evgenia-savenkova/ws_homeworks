@@ -1,27 +1,31 @@
 {
-  "name": "gulp",
+  "name": "ws_homeworks",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-rename": "^2.0.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evgenia-savenkova/evgenia-savenkova.github.io.git"
+    "url": "git+https://github.com/evgenia-savenkova/ws_homeworks.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/evgenia-savenkova/evgenia-savenkova.github.io/issues"
+    "url": "https://github.com/evgenia-savenkova/ws_homeworks/issues"
   },
-  "homepage": "https://github.com/evgenia-savenkova/evgenia-savenkova.github.io#readme",
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-sass": "^4.0.2"
-  },
-  "dependencies": {
-    "browser-sync": "^2.26.7"
-  }
+  "homepage": "https://github.com/evgenia-savenkova/ws_homeworks#readme"
 }
