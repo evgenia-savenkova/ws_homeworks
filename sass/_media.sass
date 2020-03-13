@@ -5,6 +5,11 @@
         &__item
             margin-right: 1rem
 @media screen and ( max-width: 992px )
+    .card
+        &__text
+            margin-right: 0
+        &__pricetag
+            font-size: 1rem
     .nav
         display: none
     .hero
@@ -13,6 +18,9 @@
         &__content
             margin-left: 0
 @media screen and ( max-width: 760px )
+    .section
+        padding-left: 0
+        padding-right: 0
     .row
         flex-direction: column
         align-items: center
@@ -22,7 +30,14 @@
     .card
         &__text 
                 margin-left: 0
+    .section
+        &__subtitle
+            max-width: 100%       
 @media screen and ( max-width: 576px )
+    .types
+        &--design
+            background: $dark 
+            color: $light
     .contacts
         &__phone
             margin-right: 0
@@ -44,8 +59,15 @@
             display: none
         &__content
             min-width: 22.86rem
-        
+    .section
+        &__subtitle
+            max-width: 100%   
 @media screen and ( max-width: 460px )
+    .section
+        &__subtitle
+            font-size: 1.3rem
+            line-height: 1.7rem
+            max-width: 100%
     .hero  
         &__button
             width: 100%
@@ -59,5 +81,4 @@
             max-width: 100%
         &__button
             width: 100%
-        
     
