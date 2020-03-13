@@ -344,9 +344,10 @@ template {
     background-color: transparent;
     color: #ffffff; }
 
-.label--light {
-  color: rgba(255, 255, 255, 0.5);
+.label {
   font-size: 1.07rem; }
+  .label--light {
+    color: rgba(255, 255, 255, 0.5); }
 
 .input {
   background-color: transparent;
@@ -642,8 +643,8 @@ img {
     visibility: visible; }
   .modal__dialog {
     position: relative;
-    background: #131313;
-    padding: 2.357rem 3.5rem 1.92rem;
+    background: #131313 url("../img/bg-modal.svg") no-repeat center;
+    padding: 2.357rem 3.5rem 1.928rem;
     color: #ffffff;
     max-width: 36.35rem; }
   .modal__close {
