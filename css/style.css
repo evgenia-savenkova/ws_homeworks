@@ -381,7 +381,7 @@ template {
   display: flex;
   align-items: center; }
   .policy__label::before {
-    countent: '';
+    content: '';
     width: 18px;
     height: 18px;
     border: 1px solid #E3B873;
