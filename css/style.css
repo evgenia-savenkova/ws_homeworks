@@ -671,6 +671,7 @@ img {
     display: flex;
     flex-direction: column; }
   .modal__input {
+    outline: none;
     margin-bottom: 3.428rem; }
     .modal__input:last-of-type {
       margin-bottom: 1rem; }
