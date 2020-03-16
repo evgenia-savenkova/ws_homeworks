@@ -37,13 +37,16 @@
         visibility: hidden
         &:checked +
             .policy__label
+                display: flex
+                align-items: center
+                font-size: 1.143rem
                 &::before
                     background: $primary url('../img/check.svg') no-repeat center / 0.8rem
     &__label
         display: flex
         align-items: center
         &::before
-            countert: ''
+            countent: ''
             width: 18px
             height: 18px
             border: 1px solid $primary
