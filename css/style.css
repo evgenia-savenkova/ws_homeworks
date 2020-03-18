@@ -828,7 +828,8 @@ img {
     margin: auto; }
   .footer__input {
     outline: none;
-    padding-top: 0.3rem; }
+    padding-top: 0.3rem;
+    color: #ffffff; }
     .footer__input-group {
       display: flex;
       flex-direction: column;
@@ -846,6 +847,10 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__map {
+    margin: auto;
+    margin-bottom: 4rem;
+    max-width: 66.07rem; }
 
 .modal {
   opacity: 0;

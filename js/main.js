@@ -50,28 +50,35 @@ $(document).ready(function () {
 
 
   //  Валидация формы
-  $('.modal__form').validate({
+  $('.modal__form, .control__form, .footer__form').validate({
     errorClass: "invalid",
     rules: {
       // строчное правило
       userName: {
         required: true,
-        minlength: 2
-
+        minlength: 2,
+        maxlength: 15
       },
-      userPhone: "required",
+      userPhone: {
+        required: true,
+        minlength: 16,
+      },
       // праивило-объект
       userEmail: {
         required: true,
         email: true
-      }
+      },
     }, //сообщения
     messages: {
       userName: {
         required: "Заполните поле",
         minlength: "Имя не короче двух букв",
+        maxlength: "Слишком длинное имя. Оно должно быть не более 15 символов",
       },
-      userPhone: "Заполните поле",
+      userPhone: {
+        required: "Заполните поле",
+        minlength: "Заполните данное поле полностью",
+      },
       userEmail: {
         required: "Заполните поле",
         email: "Введите корректный email",
@@ -81,7 +88,6 @@ $(document).ready(function () {
   });
 
   // маска для номера телефона
-
   $('[type=tel]').mask('+7(000)00-00-000', {placeholder: "+7(__) __-__-___"});
 
 });
