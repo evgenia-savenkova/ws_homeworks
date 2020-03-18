@@ -57,7 +57,7 @@ $(document).ready(function () {
       userName: {
         required: true,
         minlength: 2,
-        maxlength: 1,
+        maxlength: 15,
       },
       userPhone: {
         required: true,
@@ -88,73 +88,94 @@ $(document).ready(function () {
   });
 
   // маска для номера телефона
-  $('[type=tel]').mask('+7(000)00-00-000', {placeholder: "+7(__) __-__-___"});
+  $('[type=tel]').mask('+7(000)00-00-000', {
+    placeholder: "+7(__) __-__-___"
+  });
 
 
-//  Валидация формы control
-$('.control__form').validate({
-  errorClass: "invalid",
-  rules: {
-    // строчное правило
-    userName: {
-      required: true,
-      minlength: 2,
-      maxlength: 1,
-    },
-    userPhone: {
-      required: true,
-      minlength: 16,
-    },
-  }, //сообщения
-  messages: {
-    userName: {
-      required: "Заполните поле",
-      minlength: "Имя должно быть не короче двух букв",
-      maxlength: "Слишком длинное имя. Оно должно быть не более 15 символов",
-    },
-    userPhone: {
-      required: "Заполните поле",
-      minlength: "Заполните данное поле полностью",
+  //  Валидация формы control
+  $('.control__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      userPhone: {
+        required: true,
+        minlength: 16,
+      },
+    }, //сообщения
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя должно быть не короче двух букв",
+        maxlength: "Слишком длинное имя. Оно должно быть не более 15 символов",
+      },
+      userPhone: {
+        required: "Заполните поле",
+        minlength: "Заполните данное поле полностью",
+      }
     }
-  }
 
-});
+  });
 
-//  Валидация формы footer
-$('.footer__form').validate({
-  errorClass: "invalid",
-  rules: {
-    // строчное правило
-    userName: {
-      required: true,
-      minlength: 2,
-      maxlength: 1,
-    },
-    userPhone: {
-      required: true,
-      minlength: 16,
-    },
-    // праивило-объект
-    userQuestion: {
-      required: true
-    },
-  }, //сообщения
-  messages: {
-    userName: {
-      required: "Заполните поле",
-      minlength: "Имя должно быть не короче двух букв",
-      maxlength: "Слишком длинное имя. Оно должно быть не более 15 символов",
-    },
-    userPhone: {
-      required: "Заполните поле",
-      minlength: "Заполните данное поле полностью",
-    },
-    userQuestion: {
-      required: "Заполните поле",
+  //  Валидация формы footer
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      userPhone: {
+        required: true,
+        minlength: 16,
+      },
+      // праивило-объект
+      userQuestion: {
+        required: true
+      },
+    }, //сообщения
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя должно быть не короче двух букв",
+        maxlength: "Слишком длинное имя. Оно должно быть не более 15 символов",
+      },
+      userPhone: {
+        required: "Заполните поле",
+        minlength: "Заполните данное поле полностью",
+      },
+      userQuestion: {
+        required: "Заполните поле",
+      }
     }
+
+  });
+
+  // создание yandex карты
+
+  // Функция ymaps.ready() будет вызвана, когда
+  // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+  ymaps.ready(init);
+
+  function init() {
+    // Создание карты.
+    var myMap = new ymaps.Map("map", {
+      // Координаты центра карты.
+      // Порядок по умолчанию: «широта, долгота».
+      // Чтобы не определять координаты центра карты вручную,
+      // воспользуйтесь инструментом Определение координат.
+      center: [55.76, 37.64],
+      // Уровень масштабирования. Допустимые значения:
+      // от 0 (весь мир) до 19.
+      zoom: 7
+    });
   }
-
-});
-
 
 });
