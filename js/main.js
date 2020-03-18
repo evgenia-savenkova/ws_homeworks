@@ -48,4 +48,40 @@ $(document).ready(function () {
 
   new WOW().init();
 
+
+  //  Валидация формы
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // строчное правило
+      userName: {
+        required: true,
+        minlength: 2
+
+      },
+      userPhone: "required",
+      // праивило-объект
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, //сообщения
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: "Имя не короче двух букв",
+      },
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email",
+      }
+    }
+
+  });
+
+  // маска для номера телефона
+
+  $('[type=tel]').mask('+7(000)00-00-000', {placeholder: "+7(__) __-__-___"});
+
 });
