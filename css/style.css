@@ -977,9 +977,9 @@ img {
     min-width: 22.86rem; }
   .section__subtitle {
     max-width: 100%; }
-  .control__form {
+  .control__form, .footer__form {
     flex-direction: column; }
-  .control__input-group {
+  .control__input-group, .footer__input-group {
     margin-bottom: 2rem; } }
 
 @media screen and (max-width: 460px) {
