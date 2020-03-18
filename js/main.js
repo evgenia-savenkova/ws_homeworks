@@ -49,15 +49,15 @@ $(document).ready(function () {
   new WOW().init();
 
 
-  //  Валидация формы
-  $('.modal__form, .control__form, .footer__form').validate({
+  //  Валидация формы modal
+  $('.modal__form').validate({
     errorClass: "invalid",
     rules: {
       // строчное правило
       userName: {
         required: true,
         minlength: 2,
-        maxlength: 15
+        maxlength: 1,
       },
       userPhone: {
         required: true,
@@ -66,13 +66,13 @@ $(document).ready(function () {
       // праивило-объект
       userEmail: {
         required: true,
-        email: true
+        email: true,
       },
     }, //сообщения
     messages: {
       userName: {
         required: "Заполните поле",
-        minlength: "Имя не короче двух букв",
+        minlength: "Имя должно быть не короче двух букв",
         maxlength: "Слишком длинное имя. Оно должно быть не более 15 символов",
       },
       userPhone: {
@@ -89,5 +89,72 @@ $(document).ready(function () {
 
   // маска для номера телефона
   $('[type=tel]').mask('+7(000)00-00-000', {placeholder: "+7(__) __-__-___"});
+
+
+//  Валидация формы control
+$('.control__form').validate({
+  errorClass: "invalid",
+  rules: {
+    // строчное правило
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 1,
+    },
+    userPhone: {
+      required: true,
+      minlength: 16,
+    },
+  }, //сообщения
+  messages: {
+    userName: {
+      required: "Заполните поле",
+      minlength: "Имя должно быть не короче двух букв",
+      maxlength: "Слишком длинное имя. Оно должно быть не более 15 символов",
+    },
+    userPhone: {
+      required: "Заполните поле",
+      minlength: "Заполните данное поле полностью",
+    }
+  }
+
+});
+
+//  Валидация формы footer
+$('.footer__form').validate({
+  errorClass: "invalid",
+  rules: {
+    // строчное правило
+    userName: {
+      required: true,
+      minlength: 2,
+      maxlength: 1,
+    },
+    userPhone: {
+      required: true,
+      minlength: 16,
+    },
+    // праивило-объект
+    userQuestion: {
+      required: true
+    },
+  }, //сообщения
+  messages: {
+    userName: {
+      required: "Заполните поле",
+      minlength: "Имя должно быть не короче двух букв",
+      maxlength: "Слишком длинное имя. Оно должно быть не более 15 символов",
+    },
+    userPhone: {
+      required: "Заполните поле",
+      minlength: "Заполните данное поле полностью",
+    },
+    userQuestion: {
+      required: "Заполните поле",
+    }
+  }
+
+});
+
 
 });
