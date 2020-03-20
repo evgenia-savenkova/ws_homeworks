@@ -381,11 +381,11 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked + .policy__label {
+  .policy__checkbox:checked ~ .policy__label {
     display: flex;
     align-items: center;
     font-size: 1.143rem; }
-    .policy__checkbox:checked + .policy__label::before {
+    .policy__checkbox:checked ~ .policy__label::before {
       background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__label {
@@ -419,7 +419,8 @@ html {
 
 body {
   font-family: 'Futura Book', sans-serif;
-  font-size: 1rem; }
+  font-size: 1rem;
+  font-weight: normal; }
 
 img {
   max-width: 100%; }
@@ -439,7 +440,8 @@ img {
       font-size: 1.8rem;
       line-height: 138%;
       text-transform: uppercase;
-      font-family: "Yeseva One", cursive; }
+      font-family: "Yeseva One", cursive;
+      font-weight: normal; }
       .section-title__heading--primary {
         color: #E3B873; }
     .section-title__word {
@@ -506,24 +508,26 @@ img {
   margin-right: 2.7rem; }
   .nav__item:hover {
     color: #E3B873; }
+  .nav__item--primary {
+    color: #E3B873; }
 
 .phone {
   color: #E3B873;
   text-decoration: none; }
-  .phone::after {
-    display: block;
-    position: relative;
-    margin-right: 50%;
-    content: "";
-    height: 1px;
-    width: 8.5rem;
-    background-color: #E3B873; }
 
 .contacts {
   display: flex;
   align-items: center; }
   .contacts__phone {
     margin-right: 45px; }
+    .contacts__phone::after {
+      display: block;
+      position: relative;
+      margin-right: 50%;
+      content: "";
+      height: 1px;
+      width: 8.5rem;
+      background-color: #E3B873; }
   .contacts__button {
     padding: 0.8rem 1.7rem; }
 
@@ -789,7 +793,6 @@ img {
   bottom: -2.3rem;
   font-size: 1.29rem;
   font-family: 'Yeseva One', cursive;
-  font-weight: normal;
   text-transform: uppercase;
   background-color: #E3B873;
   color: #ffffff;
@@ -815,11 +818,13 @@ img {
   .footer__title {
     text-transform: uppercase;
     font-family: 'Yeseva One', cursive;
-    font-weight: normal;
     font-size: 1.428rem;
     text-align: center;
     margin-bottom: 3.214rem;
-    margin-top: 0; }
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 40%; }
   .footer__form {
     display: flex;
     flex-wrap: wrap;
@@ -848,8 +853,19 @@ img {
     background-color: #131313;
     padding: 4.285rem 0; }
   .footer__map {
+    margin: auto;
     margin-bottom: 4rem;
-    min-height: 465px; }
+    max-width: 66.07rem;
+    height: 33.21rem; }
+  .footer__contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3.071rem;
+    margin-top: -1.34rem;
+    margin-right: -0.5rem; }
+    .footer__contacts--primary {
+      margin-right: 1rem; }
 
 .modal {
   opacity: 0;

@@ -25,9 +25,16 @@
         margin-right: 2.7rem
         &:hover
             color: $primary
+        &--primary
+            color: $primary
 .phone
-        color: $primary
-        text-decoration: none
+    color: $primary
+    text-decoration: none
+.contacts
+    display: flex
+    align-items: center
+    &__phone
+        margin-right: 45px
         &::after
             display: block
             position: relative
@@ -36,10 +43,5 @@
             height: 1px
             width: 8.5rem
             background-color: $primary
-.contacts
-    display: flex
-    align-items: center
-    &__phone
-        margin-right: 45px
     &__button
         padding: 0.8rem 1.7rem
